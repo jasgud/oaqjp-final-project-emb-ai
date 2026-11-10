@@ -16,7 +16,8 @@ def emotionDetector():
     text_to_analyze = request.args.get('textToAnalyze')
     # Pass the text to the emotion_detector function and store the response
     response = emotion_detector(text_to_analyze)
-
+    if response["dominant_emotion"] is None:
+        return "Invalid Text!"
     return response
 
 #Make endpoint for root
