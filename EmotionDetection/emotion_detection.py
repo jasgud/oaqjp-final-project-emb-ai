@@ -15,7 +15,6 @@ def emotion_detector(text_to_analyze):
     # Make a POST request to the API with the payload and headers
     response = requests.post(url, json=myobj, headers=header)
 
-    # If the response status code is 200, extract the label and score from the response
     if response.status_code == 400:
         result = {
         "anger": None,

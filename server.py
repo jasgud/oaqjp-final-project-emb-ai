@@ -1,3 +1,6 @@
+"""
+This application uses IBM watson to do Emotion Detection on inputted text
+"""
 # Import Flask, render_template, request from the flask
 from flask import Flask, render_template, request
 
@@ -9,7 +12,7 @@ app = Flask("Emotion Detector")
 
 #Make endpoint for emotionDetector
 @app.route("/emotionDetector")
-def emotionDetector():
+def emotion_detector_route():
     """
     Retrieve the text to detect from the request arguments
     """
